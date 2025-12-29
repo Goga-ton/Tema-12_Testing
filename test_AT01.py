@@ -1,6 +1,6 @@
 import unittest
 from AT01_avtotesting_v1 import add, subtract, multiply, divide, dividenull
-from runer import check
+
 
 class TestMath(unittest.TestCase):
     def test_add(self):
@@ -20,7 +20,7 @@ class TestMath(unittest.TestCase):
         self.assertEqual(divide(6, 3), 2)
         self.assertEqual(divide(35, 7), 5)
     def test_div_null(self):
-        self.assertRaises(TypeError, dividenull, 6, 0)
+        self.assertRaises(ValueError, dividenull, 6, 0)
 
 
 # так и не разобрался зачем этот код кроме как для запуска в терминале (без этого блока не запуститься)
